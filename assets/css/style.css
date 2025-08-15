@@ -501,10 +501,12 @@ main {
 .service-title { margin-bottom: 20px; }
 
 .service-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  display: flex; /* or display: grid; */
+  flex-direction: column; /* if you want vertical stacking */
+  row-gap: 20px; /* now works */
+  list-style-type: disc;
 }
+
 
 .service-item {
   position: relative;
@@ -512,6 +514,7 @@ main {
   padding: 20px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
+  list-style-type: disc;
   z-index: 1;
 }
 
